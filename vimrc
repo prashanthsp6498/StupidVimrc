@@ -1,30 +1,28 @@
-"=================Plugin config================
-set nocompatible
-filetype off
+call plug#begin()
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+Plug 'jceb/vim-orgmode'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vimwiki/vimwiki'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#end()
 
-
-Plugin 'tpope/vim-surround'
-Plugin 'jiangmiao/auto-pairs'
-
-
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-"===================My config=================
-
-
+filetype plugin indent on
+syntax on
 set number
-set clipboard=unnamedplus
-imap jf <ESC>
-nnoremap <C-h> :tabprevious<CR>
-nnoremap <C-l> :tabnext<CR>
-nnoremap <C-c><C-f> :tabnew<CR>
+set expandtab ts=4 sw=4
+set autoindent
+set ruler
+set incsearch
+
+set encoding=utf-8
+
+nmap <leader>so :source ~/.vimrc<cr>
+nmap <leader>ff :Files<CR>
+
 nnoremap <C-m> :call RunCpp()<CR>
 
 function! RunCpp()
