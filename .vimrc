@@ -12,6 +12,7 @@ call plug#end()
 
 filetype plugin indent on
 syntax on
+set title
 set number
 set expandtab ts=4 sw=4
 set autoindent
