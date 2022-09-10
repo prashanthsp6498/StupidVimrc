@@ -30,3 +30,9 @@ function! RunCpp()
     !g++ -std=c++17 % && a.exe
 endfunction
 
+if has("gui_running")
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    colorscheme desert
+endif
