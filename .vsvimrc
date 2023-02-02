@@ -2,19 +2,31 @@
 set number
 set relativenumber
 map <leader>so :source ~/.vsvimrc
+map <leader>oc :e ~/.vimrc<CR>
+map <leader>tv :vsc VsVim.ToggleEnabled<CR>
+map <C-d> <C-d>zz
+map <C-u> <C-u>zz
 
 " Debugger
 " Always start keymap with <leader>d for debug related bindings
 map <leader>db :vsc Debug.ToggleBreakpoint<CR>
 map <leader>ds :vsc Debug.Start<CR>
 map <leader>dS :vsc Debug.StopDebugging<CR>
-nnoremap <leader>dbw :vsc Debug.Breakpoints<CR>
+map <leader><leader>db :vsc Debug.Breakpoints<CR>
+map <M-o> :vsc Debug.StepOver<CR>
+map <M-i> :vsc Debug.StepInto<CR>
+map <M-s>o :vsc Debug.StepOut<CR>
+map <leader>dap :vsc Debug.AttachtoProcess<CR>
+map <leader>dau :vsc Debug.AttachUnityDebugger<CR>
+map <leader>da :vsc Debug.Autos<CR>
+map <leader>dl :vsc Debug.Locals<CR>
 
 " Buffers
 nnoremap <leader>h gT<CR>
 nnoremap <leader>l gt<CR>
 map <C-x><C-f> :vsc File.Openfile<CR>
-map <leader>ff :vsc Edit.GotoFile<CR>
+map <leader>gf :vsc Edit.GotoFile<CR>
+map <leader>ff :vsc Edit.FindInFiles<CR>
 map <leader>fm :vsc Edit.GotoMember<CR>
 map <leader>fa :vsc Edit.GotoAll<CR>
 map <leader>fw :vsc Window.Windows<CR>
@@ -31,3 +43,8 @@ map gi :vsc Edit.GoToImplementation<CR>
 map <C-o> :vsc View.NavigateBackward<CR>
 nnoremap gr :vsc Edit.FindAllReferences<CR>
 nnoremap <leader>fb :vsc Edit.ToggleOutliningExpansion<CR>
+nnoremap K :vsc Edit.QuickInfo<CR>
+nnoremap ge :vsc Edit.GotoNextLocation<CR>
+nnoremap gE :vsc Edit.GotoPrevLocation<CR>
+nnoremap <M-c> :vsc View.CommandWindow<CR>
+nnoremap gcc :vsc Edit.ToggleLineComment<CR>
