@@ -20,16 +20,22 @@ map <leader>dap :vsc Debug.AttachtoProcess<CR>
 map <leader>dau :vsc Debug.AttachUnityDebugger<CR>
 map <leader>da :vsc Debug.Autos<CR>
 map <leader>dl :vsc Debug.Locals<CR>
+map <leader>de :vsc Debug.RunToCursor<CR>
 
 " Buffers
 nnoremap <leader>h gT<CR>
 nnoremap <leader>l gt<CR>
 map <C-x><C-f> :vsc File.Openfile<CR>
-map <leader>gf :vsc Edit.GotoFile<CR>
-map <leader>ff :vsc Edit.FindInFiles<CR>
+map <leader>ff :vsc Edit.GotoFile<CR>
+map <leader>gs :vsc Edit.FindInFiles<CR>
 map <leader>fm :vsc Edit.GotoMember<CR>
 map <leader>fa :vsc Edit.GotoAll<CR>
 map <leader>fw :vsc Window.Windows<CR>
+map <leader>gf :vsc Window.QuickLaunch<CR>
+map <leader>b :vsc Edit.ToggleBookmark<CR>
+map <leader>bn :vsc Edit.NextBookmark<CR>
+map <leader>bp :vsc Edit.PreviousBookmark<CR>
+
 
 " Code Actions
 nnoremap <leader>rn :vsc Refactor.Rename<CR>
@@ -48,3 +54,10 @@ nnoremap ge :vsc Edit.GotoNextLocation<CR>
 nnoremap gE :vsc Edit.GotoPrevLocation<CR>
 nnoremap <M-c> :vsc View.CommandWindow<CR>
 nnoremap gcc :vsc Edit.ToggleLineComment<CR>
+
+" Tools windows
+map <leader>bw :vsc View.BookmarkWindow<CR>
+map <leader>tn :vsc Window.NextToolWindowNav<CR>
+map <leader>tp :vsc Window.PreviousToolWindowNav<CR>
+
+
