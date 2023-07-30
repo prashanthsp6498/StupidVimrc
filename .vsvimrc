@@ -22,6 +22,7 @@ map <leader>da :vsc Debug.Autos<CR>
 map <leader>dl :vsc Debug.Locals<CR>
 map <leader>de :vsc Debug.RunToCursor<CR>
 
+
 " Buffers
 nnoremap <leader>h gT<CR>
 nnoremap <leader>l gt<CR>
@@ -60,4 +61,5 @@ map <leader>bw :vsc View.BookmarkWindow<CR>
 map <leader>tn :vsc Window.NextToolWindowNav<CR>
 map <leader>tp :vsc Window.PreviousToolWindowNav<CR>
 
-
+inoremap <M-n> :vsc Edit.LineDown<CR>
+inoremap <M-p> :vsc Edit.LineUp<CR>
